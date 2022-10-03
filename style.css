@@ -1,0 +1,418 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+
+}
+
+
+.plantillaPrncipal{
+background: black;
+padding-right: 10rem;
+padding-left: 11rem;
+}
+
+/* Principal */
+.plantillaPrncipal img{
+    width: 100%;
+    position: center;
+    opacity: 0.6;
+}
+
+
+.textoPrincipal{
+    color: white;
+    width: 50%;
+    position: absolute;
+    top: 20%;
+    z-index: 1;
+}
+
+.textoPrincipal h1{
+    font-size: 3rem;
+    width: 115%;
+}
+
+/* Tarjetas de Auriculares */
+
+.grid-layout{
+    display: grid;
+    grid-template-areas: "tarjeta1 tarjeta2 tarjeta3";
+    width: 100%;
+    padding: 5px;
+    gap: 5rem;
+    justify-content: center;
+}
+
+
+.producto{
+   max-width: 280px;
+   display: flex;
+   flex-flow: column;
+   border-radius: 6px;
+   box-shadow: 0 0 0.1em rgba(255,255,255);
+   cursor: pointer;
+}
+
+.producto:hover{
+    box-shadow: 0 0 0.1.5em rgba(0,0, 0.2);
+}
+
+.producto > img{
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.informacion{
+    border-top: 1px solid rgb( 230 ,230,230) ;
+    padding: 1em;
+    display: flex;
+    flex-flow: column;
+
+}
+
+.informacion * + * {
+margin-bottom: 0.5em;
+}
+
+.tipo-envio{
+    background-color: rgb(52,131,250);
+    color: rgb(255, 255,255);
+    font-weight: 600;
+    max-width: max-content;
+    padding: 0 0.2em;
+    border-radius: 3px;
+    max-width: max-content;
+    padding: 0 0.2em;
+    border-radius: 3px;
+   
+}
+
+.descripcion{
+    font-weight: 300;
+}
+
+.costo-envio, .descripcion .ubicacion{
+    font-size: 0.9em;
+}
+
+.precio .descripcion{
+    font-size: 0.9;
+}
+
+.precio{
+    font-size: 1.5em;
+}
+
+.costo-envio{
+    color :rgb(0, 166,80)
+}
+
+.calificacion, .ubicacion{
+    transition-duration: 0.3s;
+    opacity: 0;
+}
+
+.producto:hover .calificacion,
+.producto:hover .ubicacion{
+    opacity: 1;
+}
+
+.costo-envio, .calificacion > samp:last-child{
+   font-size:0.8em;
+}
+
+
+/* total de productos interaccion */
+.content-section {
+    margin: 1em;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5em;
+}
+.section-header {
+    font-family: var(--font);
+    font-weight: normal;
+    color: #333;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.btn {
+    text-align: center;
+    vertical-align: middle;
+    padding: .67em .67em;
+    cursor: pointer;
+}
+
+.btn-header {
+    margin: .5em 15% 2em 15%;
+    color: white;
+    border: 2px solid #2D9CDB;
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 0;
+    font-size: 1.5em;
+    font-weight: lighter;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.btn-header:hover {
+    background-color: rgba(255, 255, 255, .3);
+}
+
+
+
+.btn-primary {
+    color: white;
+    background-color:black;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color:rgb(52,131,250);
+}
+
+
+.shop-item {
+    margin: 30px;
+}
+
+.shop-item-title {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.shop-item-image {
+    height: 250px;
+}
+
+.shop-item-details {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.shop-item-price {
+    flex-grow: 1;
+    color: #333;
+}
+
+.shop-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.cart-header {
+    font-weight: bold;
+    font-size: 1.25em;
+    color: #333;
+}
+
+.cart-column {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.cart-row {
+    display: flex;
+}
+
+.cart-item {
+    width: 45%;
+}
+
+.cart-price {
+    width: 20%;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.cart-quantity {
+    width: 35%;
+}
+
+.cart-item-title {
+    color: #333;
+    margin-left: .5em;
+    font-size: 1.2em;
+}
+
+.cart-item-image {
+    width: 75px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.btn-danger {
+    color: white;
+    background-color:rgb(52,131,250);
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.btn-danger:hover {
+    background-color: #CC4C4C;
+}
+
+.cart-quantity-input {
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid #56CCF2;
+    background-color: #eee;
+    color: #333;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 25px;
+}
+
+.cart-row:last-child {
+    border-bottom: 1px solid black;
+}
+
+.cart-row:last-child .cart-column {
+    border: none;
+}
+
+.cart-total {
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.cart-total-title {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: black;
+    margin-right: 20px;
+}
+
+.cart-total-price {
+    color: #333;
+    font-size: 1.1em;
+}
+
+.btn-purchase {
+    display: block;
+    margin: 40px auto 80px auto;
+    font-size: 1.75em;
+}
+
+
+/* formulario de inciio-pago */
+
+.formulario{
+   
+    position: absolute;
+    top: 300%;
+    left: 35%;
+    width: 400px;
+    background: black;
+    padding: 30px;
+    margin: auto;
+    margin-bottom: 20px;
+
+}
+
+.formulario h4{
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.registros{
+    width: 100%;
+    background:white;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid white;
+    font-size: 18px;
+
+  }
+
+
+  .botonForm{
+    width: 100%;
+    color: white;
+    background-color:black;
+    border-radius: 0;
+    font-size: 1.5em;
+    font-weight: lighter;
+    padding-left: 2em;
+    padding-right: 2em;
+
+  }
+
+  .botonForm:hover{
+    background-color:rgb(52,131,250);
+  }
+
+/*API clima*/
+
+
+
+#contenedor{
+    color: white;
+    position:absolute;
+
+    z-index: 10000;
+    width: 100%;
+    height: 10%;
+    top: 1%;
+    text-align: center;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    background-color: rgba(0, 0, 0, 0.473);
+}
+
+#caja1 h1 {
+    font-size: 1.4rem;
+}
+
+#caja2 h2 {
+    font-size: 1rem;
+}
+
+#icono-animado{
+justify-content: center;
+top: 1%;
+margin: 0%;
+}
+
+#viento-velocidad{
+    font-size: 2rem;
+
+}
+#caja3 h3 {
+    font-size: 1rem;
+
+}
+
+
+
+
+
+
+
+
